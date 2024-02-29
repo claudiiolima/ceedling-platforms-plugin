@@ -36,7 +36,7 @@ class Platforms < Plugin
     ]
     
     Rake.application.clear
-    @ceedling[:configurator].script_plugins.each do |plugin|
+    @ceedling[:configurator].programmatic_plugins.each do |plugin|
       @ceedling.instance_variable_get(:@cache).delete(plugin.to_s)
     end
     @ceedling[:plugin_manager].instance_variable_set(:@plugin_objects, [])
